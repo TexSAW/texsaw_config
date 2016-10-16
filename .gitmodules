@@ -1,0 +1,21 @@
+[submodule "library/ansible_xbps"]
+	path = library/ansible_xbps
+	url = git@github.com:void-ansible-roles/ansible_xbps.git
+[submodule "roles/sshd"]
+	path = roles/sshd
+	url = git@github.com:void-ansible-roles/sshd.git
+[submodule "roles/network"]
+	path = roles/network
+	url = git@github.com:void-ansible-roles/network.git
+[submodule "roles/xbps-repoconf"]
+	path = roles/xbps-repoconf
+	url = git@github.com:void-ansible-roles/xbps-repoconf.git
+[submodule "roles/CTFd"]
+	path = roles/CTFd
+	url = git@github.com:void-ansible-roles/CTFd.git
+[submodule "roles/PostgreSQL"]
+	path = roles/PostgreSQL
+	url = git@github.com:void-ansible-roles/PostgreSQL.git
+[submodule "roles/nginx"]
+	path = roles/nginx
+	url = git@github.com:void-ansible-roles/nginx.git
