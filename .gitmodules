@@ -19,3 +19,9 @@
 [submodule "roles/nginx"]
 	path = roles/nginx
 	url = git@github.com:void-ansible-roles/nginx.git
+[submodule "roles/xorg"]
+	path = roles/xorg
+	url = https://github.com/void-ansible-roles/xorg.git
+[submodule "roles/lxde"]
+	path = roles/lxde
+	url = https://github.com/void-ansible-roles/lxde.git

@@ -1,0 +1,5 @@
+---
+- hosts: VM
+  become: yes
+  roles:
+    - TexSAW-VM

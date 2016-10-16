@@ -1,0 +1,33 @@
+---
+- name: Install Software
+  xbps: pkg={{ item }} state=present
+  with_items:
+    - adwaita-icon-theme
+    - base-devel
+    - feh
+    - firefox
+    - gedit
+    - gnome-icon-theme
+    - gnome-icon-theme-extras
+    - gnome-icon-theme-symbolic
+    - libressl-devel
+    - lxde-icon-theme
+    - lximage-qt
+    - python
+    - python-devel
+    - python-pip
+    - wireshark-gtk
+    - xxd
+
+- name: Create TexSAW group
+  group: name=texsaw state=present
+
+
+# This user's password is published online so its not an issue that the hash is here (vagrant box)
+- name: Create TexSAW user
+  user:
+    name: texsaw
+    group: texsaw
+    groups: users,wireshark
+    password: $6$rounds=656000$xCOMrsiwGOauNenT$Aw7veTM84NAIzWyGfbMpNduyQMP1e/NArkfLKgidocC2WeONVesEZA8Tbo90BWdeaDXE8Qj79JF2WEF1DENe8/
+    state: present
