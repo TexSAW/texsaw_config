@@ -6,3 +6,12 @@
   copy: src=root.conf dest=/etc/nginx/locations.d/ctfd/root.conf owner=root group=root mode=0644
   notify:
     - nginx
+    
+- name: Clone web root content
+  git: repo=https://github.com/TexSAW/texsaw16-website.git dest=/opt/texsaw-website
+
+- name: Fix web root permissions
+  file: path=/opt/texsaw-website state=directory owner=root group=root recurse=yes mode="u=rwX,g=rX,o=rX"
+
+- name: Move web root to appropriate location
+  shell: cp -r /opt/texsaw-website/texsaw/* /srv/www/texsaw 
