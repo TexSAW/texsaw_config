@@ -33,18 +33,6 @@
     password: $6$rounds=656000$xCOMrsiwGOauNenT$Aw7veTM84NAIzWyGfbMpNduyQMP1e/NArkfLKgidocC2WeONVesEZA8Tbo90BWdeaDXE8Qj79JF2WEF1DENe8/
     state: present
 
-- name: Install autox
-  xbps: pkg=autox state=present
-
-- name: Configure texsaw's xinitrc
-  copy: src=xinitrc dest=/home/texsaw/.xinitrc owner=texsaw group=texsaw mode=0644
-
-- name: Configure autox
-  copy: src=conf dest=/etc/sv/autox owner=root group=root mode=0644
-
-- name: Enable autox
-  file: src=/etc/sv/autox dest=/var/service/autox state=link
-
 - name: Enable ConsoleKit2
   file: src=/etc/sv/consolekit dest=/var/service/consolekit state=link
 

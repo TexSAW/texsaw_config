@@ -4,3 +4,4 @@
   roles:
     - TexSAW-VM
     - firefox
+    - lightdm-webkit-greeter
