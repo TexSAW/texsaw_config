@@ -1,0 +1,10 @@
+---
+- hosts: primaryweb
+  become: yes
+  roles:
+    - network
+    - xbps-repoconf
+    - sshd
+    - nginx
+    - PostgreSQL
+    - CTFd
