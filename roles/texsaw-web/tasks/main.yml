@@ -1,0 +1,8 @@
+---
+- name: Make TexSAW web root
+  file: path=/srv/www/texsaw/ owner=root group=root mode=0755 state=directory
+
+- name: Copy TexSAW nginx config
+  copy: src=root.conf dest=/etc/nginx/locations.d/ctfd/root.conf owner=root group=root mode=0644
+  notify:
+    - nginx
