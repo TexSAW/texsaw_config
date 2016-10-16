@@ -1,3 +1,4 @@
 output*
 packer*
 .vagrant
+shared-data
