@@ -1,0 +1,9 @@
+---
+- name: Install Firefox
+  xbps: pkg=firefox state=present
+
+- name: Setup Firefox global settings
+  copy: src=local-settings.js dest=/usr/lib/firefox/defaults/pref/local-settings.js owner=root group=root mode=0644
+
+- name: Configure Firefox global settings
+  template: src=mozilla.cfg dest=/usr/lib/firefox/mozilla.cfg owner=root group=root mode=0644
