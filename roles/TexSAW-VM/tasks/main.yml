@@ -15,6 +15,7 @@
     - libressl-devel
     - lxde-icon-theme
     - lximage-qt
+    - openbsd-netcat
     - python
     - python-devel
     - python-pip
@@ -39,8 +40,10 @@
 - name: Enable CGManager
   file: src=/etc/sv/cgmanager dest=/var/service/cgmanager state=link
 
-- name: Hotfix domain
-  lineinfile:
-    line: 10.176.169.100 texsaw.cs.utdallas.edu
-    dest: /etc/hosts
-    state: present
+- name: Get JD-GUI
+  get_url:
+    url: https://github.com/java-decompiler/jd-gui/releases/download/v1.4.0/jd-gui-1.4.0.jar
+    dest: /home/texsaw/jd-gui.jar
+    owner: texsaw
+    group: texsaw
+    mode: 0755

@@ -6,7 +6,7 @@
                 ["modifyvm", "{{.Name}}", "--nictype1", "virtio"]
             ],
             "iso_url": "http://localhost:8000/void.iso",
-            "iso_checksum": "9099190114cb0045f9f822285752d997904fd108e6ffb7cef0517a43260aca19",
+            "iso_checksum": "c13d302eb5e34b21594149e73c65f4aebe37e2a8ae59a3950443786c19c7f898",
             "iso_checksum_type": "sha256",
             "boot_wait": "5s",
             "boot_command": [
@@ -41,7 +41,8 @@
     "post-processors": [
         {
             "type": "vagrant",
-            "keep_input_artifact": false
+            "keep_input_artifact": true,
+            "output": "TexSAW.box"
         }
     ]
 }

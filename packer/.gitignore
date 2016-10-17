@@ -2,3 +2,4 @@ output*
 packer*
 .vagrant
 shared-data
+*.box
