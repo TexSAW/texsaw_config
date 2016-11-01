@@ -1,0 +1,7 @@
+---
+- hosts: challenge
+  become: yes
+  roles:
+    - network
+    - xbps-repoconf
+    - sshd
