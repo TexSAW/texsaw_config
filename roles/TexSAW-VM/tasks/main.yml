@@ -16,6 +16,7 @@
     - lxde-icon-theme
     - lximage-qt
     - openbsd-netcat
+    - openjdk
     - python
     - python-devel
     - python-pip

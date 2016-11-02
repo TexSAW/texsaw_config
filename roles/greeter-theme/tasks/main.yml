@@ -1,6 +1,14 @@
 ---
 - name: Copy theme
-  copy: src=texsaw-greeter-theme dest=/usr/share/lightdm-webkit/themes/texsaw owner=root group=root mode=ugo+rX
+  copy: src=texsaw-greeter-theme/ dest=/usr/share/lightdm-webkit/themes/texsaw owner=root group=root mode=ugo+rX
 
 - name: Correct permissions on theme folder
   file: path=/usr/share/lightdm-webkit/themes/texsaw owner=root group=root mode=0755
+
+- name: Copy the default wallpaper
+  copy:
+    src: texsaw-greeter-theme/background.jpg
+    dest: /usr/share/lxde/wallpapers/lxde_blue.jpg
+    owner: root
+    group: root
+    mode: 0644
