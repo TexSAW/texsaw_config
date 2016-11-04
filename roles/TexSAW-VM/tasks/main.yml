@@ -35,6 +35,15 @@
     password: $6$rounds=656000$xCOMrsiwGOauNenT$Aw7veTM84NAIzWyGfbMpNduyQMP1e/NArkfLKgidocC2WeONVesEZA8Tbo90BWdeaDXE8Qj79JF2WEF1DENe8/
     state: present
 
+- name: Copy session setup script
+  copy: src=vbox-setup dest=/usr/local/bin/vbox-setup owner=root group=root mode=0755
+
+- name: Ensure that lightdm.conf.d exists
+  file: path=/etc/lightdm.conf.d state=directory owner=root group=root mode=0755
+
+- name: Configure lightdm
+  copy: src=80-screen.conf dest=/etc/lightdm.conf.d/80-screen.conf owner=root group=root mode=0644
+
 - name: Enable ConsoleKit2
   file: src=/etc/sv/consolekit dest=/var/service/consolekit state=link
 

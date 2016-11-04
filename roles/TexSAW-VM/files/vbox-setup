@@ -1,0 +1,5 @@
+#!/bin/sh
+
+VBoxClient --clipboard
+VBoxClient --draganddrop
+VBoxClient --display
