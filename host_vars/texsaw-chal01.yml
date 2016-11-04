@@ -1,8 +1,0 @@
----
-network_address_mode: static
-network_dns_mode: static
-network_address: 10.176.169.101
-network_gateway: 10.176.169.1
-network_dns:
-  - 10.182.70.107
-  - 10.180.15.100

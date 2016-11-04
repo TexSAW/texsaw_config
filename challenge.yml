@@ -5,3 +5,4 @@
     - network
     - xbps-repoconf
     - sshd
+    - monit
