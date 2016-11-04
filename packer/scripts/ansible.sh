@@ -6,4 +6,4 @@ xbps-install -Sy python python-devel libressl-devel base-devel python-pip git-al
 
 pip install ansible netaddr
 
-ansible-pull --accept-host-key -U https://github.com/TexSAW/texsaw_config.git -C VM vm.yml
+ansible-pull --accept-host-key -U https://github.com/TexSAW/texsaw_config.git vm.yml
